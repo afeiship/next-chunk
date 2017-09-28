@@ -1,0 +1,26 @@
+{
+  "name": "next-chunk",
+  "description": "Creates an array of elements split into groups the length of size. If array can&#39;t be split evenly, the final chunk will be the remaining elements.",
+  "main": "dist/next-chunk.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/next-chunk",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "gulp",
+    "gulpfile.js"
+  ]
+}
