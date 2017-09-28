@@ -6,8 +6,8 @@
 
   nx.chunk = function (inArray, inOffset) {
     var maxSize = Math.ceil(inArray.length / inOffset);
-    var sliceList = [];
-    var chunkList = [];
+    var sliceList = [],
+      chunkList = [];
 
     //generate chunkList:
     for (var index = 0; index < maxSize; index++) {
@@ -17,11 +17,10 @@
       ]);
     }
 
-    sliceList.forEach(function(item){
-      chunkList.push(
-        inArray.slice.apply(inArray, item )
-      )
-    });
+    sliceList
+      .forEach(function (item) {
+        chunkList.push(inArray.slice.apply(inArray, item))
+      });
 
     return chunkList;
   };
