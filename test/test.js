@@ -1,25 +1,32 @@
-var assert = require('assert');
 var nx = require('next-js-core2');
 require('../src/next-chunk');
 
-describe('next/chunk', function () {
+test('nx.chunk [1,2,3,4,5,6,7,8,9] ', function() {
+  var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  var res = nx.chunk(arr, 3);
 
-  it('nx.chunk [1,2,3,4,5,6,7,8,9] ', function () {
-    var arr = [1,2,3,4,5,6,7,8,9];
-    var res = nx.chunk(arr, 3);
+  expect(res.length).toBe(3);
+  expect(res[2]).toEqual([7, 8, 9]);
+});
 
-    assert.equal(res.length, 3);
-    assert.deepEqual(res[2], [7,8,9]);
-  });
+test('nx.chunk [1,2,3,4,5,6,7,8] ', function() {
+  var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+  var res = nx.chunk(arr, 3);
 
+  expect(res.length).toBe(3);
+  expect(res[2]).toEqual([7, 8]);
+});
 
-  it('nx.chunk [1,2,3,4,5,6,7,8] ', function () {
-    var arr = [1,2,3,4,5,6,7,8];
-    var res = nx.chunk(arr, 3);
+test('nx.chunk split small array size === limit', function() {
+  var arr = [1, 2, 3];
+  var res = nx.chunk(arr, 3);
+  expect(res.length).toBe(1);
+  expect(res[0]).toEqual([1, 2, 3]);
+});
 
-    assert.equal(res.length, 3);
-    assert.deepEqual(res[2], [7,8]);
-  });
-
-
+test('nx.chunk split small array size < limit', function() {
+  var arr = [1, 2];
+  var res = nx.chunk(arr, 3);
+  expect(res.length).toBe(1);
+  expect(res[0]).toEqual([1, 2]);
 });

@@ -1,6 +1,6 @@
 {
   "name": "next-chunk",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Creates an array of elements split into groups the length of size. If array can&#39;t be split evenly, the final chunk will be the remaining elements.",
   "homepage": "https://github.com/afeiship/next-chunk",
   "author": {
@@ -8,7 +8,8 @@
     "email": "1290657123@qq.com"
   },
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "test": "jest"
   },
   "main": "dist/next-chunk.js",
   "license": "MIT",
@@ -18,11 +19,11 @@
     "gulp-concat": "^2.6.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^2.1.2",
-    "yargs": "^4.7.1",
-    "mocha": "^3.5.0"
+    "jest": "^23.6.0",
+    "mocha": "^3.5.0",
+    "yargs": "^4.7.1"
   },
   "dependencies": {
     "next-js-core2": "github:afeiship/next-js-core2"
