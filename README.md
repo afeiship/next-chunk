@@ -1,6 +1,10 @@
 # next-chunk
-> Creates an array of elements split into groups the length of size. If array can&#39;t be split evenly, the final chunk will be the remaining elements.
+> Creates an array of elements split into groups the length of size If array can&#39;t be split evenly, the final chunk will be the remaining elements
 
+## installation
+```bash
+npm install -S afeiship/next-chunk --registry=https://registry.npm.taobao.org
+```
 
 ## usage:
 ```js

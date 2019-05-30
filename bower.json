@@ -1,6 +1,7 @@
 {
   "name": "next-chunk",
-  "description": "Creates an array of elements split into groups the length of size. If array can&#39;t be split evenly, the final chunk will be the remaining elements.",
+  "version": "0.0.1",
+  "description": "Creates an array of elements split into groups the length of size If array can&#39;t be split evenly, the final chunk will be the remaining elements",
   "main": "dist/next-chunk.js",
   "authors": [
     "afei"
@@ -19,6 +20,7 @@
     "bower_components",
     "test",
     "tests",
+    "build",
     "src",
     "gulp",
     "gulpfile.js"
