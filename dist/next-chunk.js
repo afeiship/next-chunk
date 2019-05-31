@@ -9,13 +9,13 @@
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('next-js-core2');
 
-  nx.chunk = function(inArray, inOffset) {
-    var size = Math.ceil(inArray.length / inOffset);
+  nx.chunk = function(inArray, inChunk) {
+    var size = Math.ceil(inArray.length / inChunk);
     var list = [];
 
     //generate chunkList:
     for (var index = 0; index < size; index++) {
-      list.push([index * inOffset, (index + 1) * inOffset]);
+      list.push([index * inChunk, (index + 1) * inChunk]);
     }
 
     return list.map(function(item) {
