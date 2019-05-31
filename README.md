@@ -11,10 +11,17 @@ npm install -S afeiship/next-chunk --registry=https://registry.npm.taobao.org
 | -------- | ----------------- | -------------------- |
 | nx.chunk | (inArray,inChunk) | Create split chunks |
 
-## usage:
+## usage
 ```js
-var arr = [1,2,3,4,5,6,7,8];
-var res = nx.chunk(arr, 3);
+// es6
+import nxChunk from 'next-chunk';
+
+// es5
+const nxChunk from 'next-chunk';
+
+
+const arr = [1,2,3,4,5,6,7,8];
+const res = nxChunk(arr, 3);
 
 /*
   [ 
