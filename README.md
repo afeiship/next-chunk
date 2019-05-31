@@ -9,7 +9,7 @@ npm install -S afeiship/next-chunk --registry=https://registry.npm.taobao.org
 ## apis
 | api      | type              | description          |
 | -------- | ----------------- | -------------------- |
-| nx.chunk | (inArray,inChunk) | Create splite chunks |
+| nx.chunk | (inArray,inChunk) | Create split chunks |
 
 ## usage:
 ```js
