@@ -1,27 +1,22 @@
 # next-chunk
-> Creates an array of elements split into groups the length of size If array can&#39;t be split evenly, the final chunk will be the remaining elements
+> Creates an array of elements split into groups the length of size.
 
 ## installation
 ```bash
-npm install -S afeiship/next-chunk --registry=https://registry.npm.taobao.org
+npm install -S @feizheng/next-chunk
 ```
 
 ## apis
-| api      | type              | description          |
-| -------- | ----------------- | -------------------- |
+| api      | type              | description         |
+| -------- | ----------------- | ------------------- |
 | nx.chunk | (inArray,inChunk) | Create split chunks |
 
 ## usage
 ```js
-// es6
-import nxChunk from 'next-chunk';
-
-// es5
-const nxChunk from 'next-chunk';
-
+import '@feizheng/next-chunk';
 
 const arr = [1,2,3,4,5,6,7,8];
-const res = nxChunk(arr, 3);
+const res = nx.chunk(arr, 3);
 
 /*
   [ 
