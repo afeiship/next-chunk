@@ -3,7 +3,7 @@
  * description: Creates an array of elements split into groups the length of size.
  * homepage: https://github.com/afeiship/next-chunk
  * version: 1.0.0
- * date: 2020-11-21 09:19:47
+ * date: 2020-11-21 09:22:33
  * license: MIT
  */
 
