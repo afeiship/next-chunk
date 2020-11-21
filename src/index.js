@@ -1,8 +1,8 @@
-(function() {
+(function () {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
+  var nx = global.nx || require('@jswork/next');
 
-  nx.chunk = function(inArray, inChunk) {
+  nx.chunk = function (inArray, inChunk) {
     var size = Math.ceil(inArray.length / inChunk);
     var list = [];
 
@@ -11,7 +11,7 @@
       list.push([index * inChunk, (index + 1) * inChunk]);
     }
 
-    return list.map(function(item) {
+    return list.map(function (item) {
       return inArray.slice.apply(inArray, item);
     });
   };

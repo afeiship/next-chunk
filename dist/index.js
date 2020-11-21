@@ -1,17 +1,17 @@
 /*!
- * name: @feizheng/next-chunk
+ * name: @jswork/next-chunk
  * description: Creates an array of elements split into groups the length of size.
- * url: https://github.com/afeiship/next-chunk
+ * homepage: https://github.com/afeiship/next-chunk
  * version: 1.0.0
- * date: 2020-03-09 01:07:27
+ * date: 2020-11-21 09:19:47
  * license: MIT
  */
 
-(function() {
+(function () {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
+  var nx = global.nx || require('@jswork/next');
 
-  nx.chunk = function(inArray, inChunk) {
+  nx.chunk = function (inArray, inChunk) {
     var size = Math.ceil(inArray.length / inChunk);
     var list = [];
 
@@ -20,7 +20,7 @@
       list.push([index * inChunk, (index + 1) * inChunk]);
     }
 
-    return list.map(function(item) {
+    return list.map(function (item) {
       return inArray.slice.apply(inArray, item);
     });
   };
@@ -29,5 +29,3 @@
     module.exports = nx.chunk;
   }
 })();
-
-//# sourceMappingURL=next-chunk.js.map
