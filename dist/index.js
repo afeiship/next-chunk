@@ -3,16 +3,19 @@
  * description: Creates an array of elements split into groups the length of size.
  * homepage: https://github.com/afeiship/next-chunk
  * version: 1.0.0
- * date: 2020-11-21 09:22:33
+ * date: 2021-03-17 13:15:37
  * license: MIT
  */
 
 (function () {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@jswork/next');
+  var FUNC = 'function';
 
-  nx.chunk = function (inArray, inChunk) {
-    var size = Math.ceil(inArray.length / inChunk);
+  nx.chunk = function (inTarget, inChunk) {
+    if (typeof inTarget.slice !== FUNC) return;
+    var length = inTarget.length || inTarget.size;
+    var size = Math.ceil(length / inChunk);
     var list = [];
 
     //generate chunkList:
@@ -21,7 +24,7 @@
     }
 
     return list.map(function (item) {
-      return inArray.slice.apply(inArray, item);
+      return inTarget.slice.apply(inTarget, item);
     });
   };
 

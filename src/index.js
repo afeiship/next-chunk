@@ -1,9 +1,12 @@
 (function () {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@jswork/next');
+  var FUNC = 'function';
 
-  nx.chunk = function (inArray, inChunk) {
-    var size = Math.ceil(inArray.length / inChunk);
+  nx.chunk = function (inTarget, inChunk) {
+    if (typeof inTarget.slice !== FUNC) return;
+    var length = inTarget.length || inTarget.size;
+    var size = Math.ceil(length / inChunk);
     var list = [];
 
     //generate chunkList:
@@ -12,7 +15,7 @@
     }
 
     return list.map(function (item) {
-      return inArray.slice.apply(inArray, item);
+      return inTarget.slice.apply(inTarget, item);
     });
   };
 

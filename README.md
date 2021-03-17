@@ -30,6 +30,14 @@ const res = nx.chunk(arr, 3);
     [ 7, 8 ] 
   ]
 */
+const file =new File(["foobar"], "foo.txt", {
+  type: "text/plain",
+});
+
+const res = nx.chunk(file, 2);
+/*
+[ Blob, Blob, Blob ]
+*/
 ```
 
 ## license

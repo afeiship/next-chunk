@@ -31,5 +31,13 @@
       expect(res.length).toBe(1);
       expect(res[0]).toEqual([1, 2]);
     });
+
+    test('support buffer/file target', function () {
+      var buf = Buffer.from('buffer');
+      var res = nx.chunk(buf, 2);
+      expect(res[0].toString()).toBe('bu');
+      expect(res[1].toString()).toBe('ff');
+      expect(res[2].toString()).toBe('er');
+    });
   });
 })();
