@@ -20,24 +20,21 @@ npm install -S @jswork/next-chunk
 ```js
 import '@jswork/next-chunk';
 
+// array
 const arr = [1,2,3,4,5,6,7,8];
 const res = nx.chunk(arr, 3);
+// result:
+// [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8 ] ]
 
-/*
-  [ 
-    [ 1, 2, 3 ], 
-    [ 4, 5, 6 ], 
-    [ 7, 8 ] 
-  ]
-*/
+
+// buffer/file
 const file =new File(["foobar"], "foo.txt", {
   type: "text/plain",
 });
 
+// result:
 const res = nx.chunk(file, 2);
-/*
-[ Blob, Blob, Blob ]
-*/
+// [ Blob, Blob, Blob ] 
 ```
 
 ## license
