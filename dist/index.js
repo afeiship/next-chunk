@@ -2,8 +2,8 @@
  * name: @jswork/next-chunk
  * description: Creates an array of elements split into groups the length of size.
  * homepage: https://github.com/afeiship/next-chunk
- * version: 1.0.1
- * date: 2021-03-18 09:29:29
+ * version: 1.0.2
+ * date: 2021-03-18 09:30:01
  * license: MIT
  */
 

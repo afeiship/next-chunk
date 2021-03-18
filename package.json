@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-chunk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Creates an array of elements split into groups the length of size.",
   "homepage": "https://github.com/afeiship/next-chunk",
   "author": {
@@ -41,6 +41,10 @@
     "next",
     "chunk",
     "each",
-    "slice"
+    "slice",
+    "file",
+    "buffer",
+    "blob",
+    "each-slice"
   ]
 }
