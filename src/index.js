@@ -4,7 +4,7 @@
   var FUNC = 'function';
 
   nx.chunk = function (inTarget, inChunk) {
-    if (typeof inTarget.slice !== FUNC) return;
+    if (!inTarget || typeof inTarget.slice !== FUNC) return inTarget;
     var length = inTarget.length || inTarget.size;
     var size = Math.ceil(length / inChunk);
     var list = [];

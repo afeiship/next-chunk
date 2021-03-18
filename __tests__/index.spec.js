@@ -39,5 +39,11 @@
       expect(res[1].toString()).toBe('ff');
       expect(res[2].toString()).toBe('er');
     });
+
+    test('chunk not exist', function () {
+      var target = null;
+      var res = nx.chunk(target, 2);
+      expect(res).toBe(target);
+    });
   });
 })();

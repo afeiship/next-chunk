@@ -3,7 +3,7 @@
  * description: Creates an array of elements split into groups the length of size.
  * homepage: https://github.com/afeiship/next-chunk
  * version: 1.0.1
- * date: 2021-03-17 13:17:54
+ * date: 2021-03-18 09:29:29
  * license: MIT
  */
 
@@ -13,7 +13,7 @@
   var FUNC = 'function';
 
   nx.chunk = function (inTarget, inChunk) {
-    if (typeof inTarget.slice !== FUNC) return;
+    if (!inTarget || typeof inTarget.slice !== FUNC) return inTarget;
     var length = inTarget.length || inTarget.size;
     var size = Math.ceil(length / inChunk);
     var list = [];
